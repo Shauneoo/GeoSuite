@@ -1,0 +1,164 @@
+<div id="map"></div>
+<nav>
+  <img src="./img/geoaid-logo.svg" class="navLogo" alt="GeoAid Logo">
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-inverse p-3 collapsedInfo">
+      <button type="button" class="btn btn-danger btn-md" onclick="clearLocalData()">Delete Wallet</button>
+    </div>
+  </div>
+ <button class="menuButton" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+    <img class="menuIcons" src="./img/menu.svg"></span>
+  </button>
+</nav>
+<div class="splashPopup">
+  <div class="row no-gutters">
+    <div class="col"></div>
+    <div class="col-lg-4 col-md-5 col-sm-6 col-8">
+      <img src="./img/geoaid-logo.svg" class="logo" alt="geocoinlogo">
+      <p id=siteDescription>is an explorative platform for geolocated currencies</p>
+    </div>
+    <div class="col"></div>
+  </div>
+  <div class="row no-gutters signInContainer">
+    <div class="col"></div>
+    <div class="col-lg-4 col-md-5 col-sm-6 col-8">
+      <form class="userInput">
+        <div class="form-group" action="">
+          <label>Please enter your name to create your temporary GeoAid wallet:</label>
+          <input id='userNameInput' type="text" name='name'>
+        </div>
+        <button type="button" class="btn btn-primary btn-md">Sign in</button>
+      </form>
+    </div>
+    <div class="col"></div>
+  </div>
+</div>
+
+<%# <div class="userDetails">
+  <p><span id="userName"></span>, your balance is: <br /> <span id="confirmedUserBalance"></span> confirmed (<span id="pendingAccountBalance"></span> unconfirmed) GeoCoins</p>
+</div>%>
+
+<form id="newEventForm" class="collapse">
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-10">
+      <h3 class="headerMargin">Create new fund</h3>
+    </div>
+    <div class="col-1"></div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-1"></div>
+    <div class="col-10">
+      <label>Title</label>
+      <input type="text" class="form-control" id="eventName" placeholder="Please enter event name">
+    </div>
+    <div class="col-1"></div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-1"></div>
+    <div class="col-10">
+      <label for="eventCause">What is the purpose of this fund?</label>
+      <textarea id="eventCause" class="form-control" placeholder="Please state indented cause"></textarea>
+    </div>
+    <div class="col-1"></div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-1"></div>
+    <div class="col-10">
+      <label>Radius (in meters)</label>
+      <input type="number" class="form-control" id="eventRadius" placeholder="Enter event radius">
+    </div>
+    <div class="col-1"></div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-1"></div>
+    <div class="col-10" id="eventFormLat">
+      <label>Location</label>
+    </div>
+    <div class="col-1"></div>
+    <div class="col-10" id="eventFormLng">
+    </div>
+    <div class="col-1"></div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-1"></div>
+    <div class="col-10">
+      <button type="button" class="btn btn-success btn-lg" onclick='processNewCharityEvent()'>Submit</button>
+      <button type="button" class="btn btn-danger btn-lg" onclick="$('#newEventForm').toggle()">Cancel</button>
+    </div>
+    <div class="col-1"></div>
+  </div>
+</form>
+
+<form id="donate" class="collapse headerMargin" eventID="">
+  <div class="form-group row">
+    <div class="col-1"></div>
+    <div class="col-10">
+      <div class="row">
+        <h3 class="col-12 bottomBorder headerMargin">Donate Money</h3>
+      </div>
+      <div class="form-group row">
+        <label class="col-8" for="donationValue">How much would you like to donate?</label>
+        <input class="col-3" id="donationValue" type="number">
+      </div>
+      <div class="form-group row">
+        <div class="col-12">
+          <label for="donationConditions">Would you like to specify how this donation should be used or by whom?</label>
+          <textarea id="donationConditions" class="col-12 form-control"></textarea>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-12">
+          <button type="button" class="btn btn-success btn-md" onclick='processDonation()'>Donate</button>
+          <button type="button" class="btn btn-danger btn-md" onclick="$('#donate').toggle()">Cancel</button>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-12">
+          <p><span class="userName"></span>, your balance is: <br /> <span class="confirmedUserBalance"></span> confirmed (<span class="pendingAccountBalance"></span> unconfirmed) GeoCoins</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-1"></div>
+  </div>
+</form>
+
+<form id="withdraw" class="collapse" eventID="">
+  <div class="form-group row">
+    <div class="col-1"></div>
+    <div class="col-10">
+      <div class="row">
+        <h3 class="col-12 bottomBorder headerMargin">Withdraw Money</h3>
+      </div>
+      <div class="form-group row">
+        <label class="col-8" for="withdrawValue">How much would you like to withdraw?</label>
+        <input class="col-3" id="withdrawValue" type="number">
+      </div>
+      <div class="form-group row">
+        <div class="col-12">
+          <label for="withdrawUses">How are you planning to use it?</label>
+          <textarea id="withdrawUses" class="form-control"></textarea>
+          <label for="verificationConditions">How could this transaction be verified and by whom?</label>
+          <textarea id="verificationConditions" class="form-control"></textarea>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-12">
+          <button type="button" class="btn btn-success btn-md" onclick='processWithdraw()'>Withdraw</button>
+          <button type="button" class="btn btn-danger btn-md" onclick="$('#withdraw').toggle()">Cancel</button>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-12">
+          <p><span class="userName"></span>, your balance is: <br /> <span class="confirmedUserBalance"></span> confirmed (<span class="pendingAccountBalance"></span> unconfirmed) GeoCoins</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-1"></div>
+  </div>
+</div>

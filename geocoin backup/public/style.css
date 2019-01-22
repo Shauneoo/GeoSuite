@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+html, body, .container {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8); }
+
+nav {
+  background-color: rgba(144, 192, 47, 0.8); }
+  nav .nav-logo {
+    height: 2.3em; }
+
+.mapContainer {
+  height: 100%;
+  width: 100%;
+  position: absolute; }
+  .mapContainer .GMap-canvas {
+    width: 100%;
+    height: 100%; }
+
+.splashPopup {
+  width: 100vw;
+  position: absolute;
+  top: 10vh;
+  background-color: rgba(144, 192, 47, 0.8);
+  overflow: auto; }
+
+.userDetails {
+  position: absolute;
+  bottom: .5em;
+  font-size: .9em;
+  background-color: rgba(144, 192, 47, 0.8);
+  margin: 0 0 0 .5em;
+  padding: 0.25em 0.5em 0.25em 0.5em; }
+  .userDetails p {
+    margin: 0 0 0 0; }
+
+#newProjectForm {
+  background-color: rgba(144, 192, 47, 0.8);
+  width: 90vw;
+  position: absolute;
+  top: 15vh;
+  margin: 0 0 0 5vw; }
+
+.markerContent {
+  color: rgba(0, 0, 0, 0.8); }
+
+.dontateToProject {
+  background-color: rgba(144, 192, 47, 0.8);
+  width: 90vw;
+  position: absolute;
+  top: 15vh;
+  margin: 0 0 0 5vw; }
+
+.withdrawFromProject {
+  background-color: rgba(144, 192, 47, 0.8);
+  width: 90vw;
+  position: absolute;
+  top: 15vh;
+  margin: 0 0 0 5vw; }
+
+/*misc*/
+.menuButton {
+  position: absolute;
+  right: 1em;
+  top: .6em;
+  border: none;
+  background-color: rgba(27, 154, 183, 0); }

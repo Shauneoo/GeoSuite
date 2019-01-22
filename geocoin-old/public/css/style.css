@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+html, body, #main {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+  color: rgba(255,255,255,.8);
+}
+.view {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+}
+
+#site-header .navbar {
+  border-radius: 0;
+  border: none;
+  margin: 0;
+}
+
+/*Main*/
+#site-main {
+  height: 100%;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.splashPopup {
+  height: 80%;
+  width: 100vw;
+  position: absolute;
+  top: 10vh;
+  background-color: rgba(144,192,47, .8);
+  display: none;
+}
+
+.logo {
+  width: 100%;
+  margin: 1.5em 0 0 0;
+}
+
+#siteDescription {
+  font-size: 1.4em;
+  text-align: center;
+  margin: 1em 0 0 0;
+}
+
+.signInContainer {
+  font-size: 1em;
+  margin: 2em 0 0 0;
+}
+
+.signInContainer button {
+  background-color: rgb(27, 154, 183);
+}
+
+.userInput {
+  text-align: center;
+  margin: 10vh 0 0 0;
+}
+
+.userDetails {
+  position: absolute;
+  bottom: .5em;
+  font-size: .9em;
+  background-color: rgba(144,192,47, 1);
+  margin: 0 0 0 .5em;
+  padding: 0.25em 0.5em 0.25em 0.5em;
+  display: none;
+}
+.userDetails p {
+  margin: 0 0 0 0;
+}
+
+nav {
+  width: 100vw;
+  height: 3em;
+  position: absolute;
+  top: 0;
+  background-color: rgba(144,192,47, 1);
+  display: none;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+
+}
+
+nav .navLogo {
+  margin: 0.3em 0 0 1em;
+  width: 8em;
+}
+
+.menuButton {
+  position: absolute;
+  right: 1em;
+  top: .6em;
+  border: none;
+  background-color: rgba(144,192,47, 1);
+}
+
+.collapsedInfo {
+  text-align: right;
+  margin: .5em 0 0 0;
+}
+
+/*admin*/
+table {
+  color: black;
+}
+
+#adminMap {
+  width: 100%;
+  height: 100vh;
+}
+
+/*@media (min-width: 1025px) {
+}*/
+
+/*@media (min-width: 769px) and (max-width: 1024px) {
+  .splashPopup {
+    height: 80vh;
+    width: 100vw;
+    position: absolute;
+    top: 10vh;
+    background-color: rgba(144,192,47, .8);
+  }
+
+  #siteDescription {
+    text-align: center;
+    margin: 1em 0 0 0;
+  }
+
+}*/
+
+@media (max-width: 768px) {
+  #siteDescription {
+    font-size: 1.1em;
+  }
+
+  .signInContainer {
+    font-size: .9em;
+  }
+}
+
+@media (max-width: 425px) {
+}
+
+@media (max-width: 375px) {
+  #siteDescription {
+    font-size: 1em;
+  }
+
+  .signInContainer {
+    font-size: .9em;
+  }
+}
+
+@media (max-width: 320px) {
+
+}

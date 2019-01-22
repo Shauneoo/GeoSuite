@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+html, body, #main {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+  color: rgba(255,255,255,.8);
+}
+.view {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+}
+
+#site-header .navbar {
+  border-radius: 0;
+  border: none;
+  margin: 0;
+}
+
+/*Main*/
+#site-main {
+  height: 100%;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.splashPopup {
+  width: 100vw;
+  position: absolute;
+  top: 10vh;
+  background-color: rgba(168,15,38, .8);
+  display: none;
+  overflow: auto;
+}
+
+.logo {
+  width: 100%;
+  margin: 1.5em 0 0 0;
+}
+
+#siteDescription {
+  font-size: 1.4em;
+  text-align: center;
+  margin: 1em 0 0 0;
+}
+
+.signInContainer {
+  font-size: 1em;
+  margin: 2em 0 0 0;
+}
+
+.signInContainer button {
+  background-color: rgb(27, 154, 183);
+}
+
+.userInput {
+  text-align: center;
+  margin: 10vh 0 1.5em 0;
+}
+
+.userDetails {
+  position: absolute;
+  bottom: .5em;
+  font-size: .9em;
+  background-color: rgba(168,15,38, .8);
+  margin: 0 0 0 .5em;
+  padding: 0.25em 0.5em 0.25em 0.5em;
+  display: none;
+}
+.userDetails p {
+  margin: 0 0 0 0;
+}
+
+nav {
+  width: 100vw;
+  height: 3em;
+  position: absolute;
+  top: 0;
+  background-color: rgba(168,15,38, 1);
+  display: none;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+
+}
+
+nav .navLogo {
+  margin: 0.3em 0 0 1em;
+  height: 2.3em;
+}
+
+.menuButton {
+  position: absolute;
+  right: 1em;
+  top: .6em;
+  border: none;
+  background-color: rgba(168,15,38, 1);
+}
+
+.collapsedInfo {
+  text-align: right;
+  margin: .4em 0 0 0;
+}
+
+#newEventForm {
+  background-color: rgba(168,15,38, 1);
+  width: 90vw;
+  position: absolute;
+  top: 15vh;
+  margin: 0 0 0 5vw;
+}
+
+#markerContent {
+  color: rgba(0, 0, 0, .8);
+}
+
+#donate {
+  background-color: rgba(168,15,38, 1);
+  width: 90vw;
+  position: absolute;
+  top: 15vh;
+  margin: 0 0 0 5vw;
+}
+
+#withdraw {
+  background-color: rgba(168,15,38, 1);
+  width: 90vw;
+  position: absolute;
+  top: 15vh;
+  margin: 0 0 0 5vw;
+}
+
+#withdrawButton {
+  display: none;
+}
+
+/*admin*/
+table {
+  color: black;
+}
+
+#adminMap {
+  width: 100%;
+  height: 100vh;
+}
+
+/*misc*/
+.headerMargin {
+  margin: .5em 0 .5em 0;
+}
+
+.bottomBorder {
+  border-bottom: thin solid #ffffff;
+}
+
+/*==========*/
+
+@media (max-width: 768px) {
+  #siteDescription {
+    font-size: 1.1em;
+  }
+
+  .signInContainer {
+    font-size: .9em;
+  }
+}
+
+@media (max-width: 425px) {
+}
+
+@media (max-width: 375px) {
+  #siteDescription {
+    font-size: 1em;
+  }
+
+  .signInContainer {
+    font-size: .9em;
+  }
+}
+
+@media (max-width: 320px) {
+
+}

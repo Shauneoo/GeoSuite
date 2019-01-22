@@ -1,0 +1,39 @@
+<div id="map"></div>
+<nav>
+  <img src="./img/GeoCoin-Logo2.svg" class="navLogo" alt="geocoinlogo">
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-inverse p-3 collapsedInfo">
+      <button type="button" class="btn btn-danger btn-md" onclick="clearLocalData()">Delete Wallet</button>
+    </div>
+  </div>
+ <button class="menuButton" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+    <img class="menuIcons" src="./img/menu.svg"></span>
+  </button>
+</nav>
+<div class="splashPopup">
+  <div class="row no-gutters">
+    <div class="col"></div>
+    <div class="col-lg-4 col-md-5 col-sm-6 col-8">
+      <img src="./img/GeoCoin-Logo2.svg" class="logo" alt="geocoinlogo">
+      <p id=siteDescription>is an explorative platform for geolocated currencies</p>
+    </div>
+    <div class="col"></div>
+  </div>
+  <div class="row no-gutters signInContainer">
+    <div class="col"></div>
+    <div class="col-lg-4 col-md-5 col-sm-6 col-8">
+      <form class="userInput">
+        <div class="form-group" action="">
+          <label>Please enter your name to create your temporary GeoCoin wallet:</label>
+          <input id='userNameInput' type="text" name='name'>
+        </div>
+        <button type="button" class="btn btn-primary btn-md">Sign in</button>
+      </form>
+    </div>
+    <div class="col"></div>
+  </div>
+</div>
+
+<div class="userDetails">
+  <p><span id="userName"></span>, your balance is: <br /> <span id="userBalance"></span> confirmed (0 unconfirmed) GeoCoins</p>
+</div>

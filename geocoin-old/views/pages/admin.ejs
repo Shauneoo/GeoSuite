@@ -1,0 +1,56 @@
+<div class="row">
+  <div class="col-8" style=" width: 100vw; overflow: scroll; height: 100vh;">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Event Type</th>
+          <th>Value</th>
+          <th>Lat</th>
+          <th>Lng</th>
+          <th>Radius</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <% for (var event of events) { %>
+            <tr>
+              <th scope="row"><%= event.type %></td>
+              <td><%= event.value %></td>
+              <td><%= event.lat %></td>
+              <td><%= event.lng %></td>
+              <td><%= event.radius %></td>
+              <form action="/event/delete" method="POST">
+                <td><button type="submit" name="deleteEvent" value="<%= event.id %>">Delete</button></td>
+              </form>
+            </tr>
+          <% } %>
+          </tr>
+          <tr>
+            <form action="/event/create" method="POST">
+              <div class="form-group">
+                <td>
+                  <select class="form-control" type="text" name="type">
+                    <option>coinCache</option>
+                    <option>toll</option>
+                    <option>passiveEarn</option>
+                    <option>passiveTax</option>
+                  </select>
+                </td>
+                <td><input class="col-10" type="number" name="value"></td>
+                <td><input class="col-12 newEventLat" name="lat"></td>
+                <td><input class="col-12 newEventLng" name="lng"></td>
+                <td><input class="col-10" type="number" name="radius"></td>
+              </div>
+              <div class="form-group">
+                <td><button type="submit" name="newEventButton" onclick="dataRefresh()">Create</button></td>
+              </div>
+            </form>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-4">
+    <div id="previewCoords"></div>
+    <div id="adminMap"></div>
+</div>
